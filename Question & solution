@@ -1,8 +1,8 @@
 #Exercises
-**Write a new Centigrade-to-Fahrenheit conversion (using the formula (x * 9/5) + 32), 
+Write a new Centigrade-to-Fahrenheit conversion (using the formula (x * 9/5) + 32), 
 saving each step of the conversion into separate values. What do you expect the type of each value will be?**
 
-**Answer**
+Answer
 
 Let’s pick a centigrade temperature at random, say 7 degrees. For optimal accuracy we’ll use 5.0, 
 a floating-point number, to ensure the remainder of the division is preserved.
