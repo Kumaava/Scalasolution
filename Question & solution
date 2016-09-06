@@ -1,8 +1,8 @@
 #Exercises
-###Write a new Centigrade-to-Fahrenheit conversion (using the formula (x * 9/5) + 32), 
-saving each step of the conversion into separate values. What do you expect the type of each value will be?
+**Write a new Centigrade-to-Fahrenheit conversion (using the formula (x * 9/5) + 32), 
+saving each step of the conversion into separate values. What do you expect the type of each value will be?**
 
-##Answer
+**Answer**
 
 Let’s pick a centigrade temperature at random, say 7 degrees. For optimal accuracy we’ll use 5.0, 
 a floating-point number, to ensure the remainder of the division is preserved.
@@ -20,9 +20,9 @@ scala> val fahrenheit = fahr2 + 32
 fahrenheit: Double = 44.6
 We now have named values for each step of the calculation, with a final answer of 44.6 degrees fahrenheit.
 
-###Modify the Centigrade-to-Fahrenheit formula to return an integer instead of a floating-point number.
+Modify the Centigrade-to-Fahrenheit formula to return an integer instead of a floating-point number.
 
-##Answer
+Answer
 
 The "5.0" floating-point number value resulted in the final result having the same type. To return an integer, we can switch the one floating-point number to an integer.
 
@@ -33,9 +33,9 @@ scala> val fahrenheit = fahr2 + 32
 fahrenheit: Int = 44
 The result, 44, is pretty darn close to the value calculated with a floating-point divisor, 44.6.
 
-###Using the input value 2.7255, generate the string “You owe $2.73.” Is this doable with string interpolation?
+Using the input value 2.7255, generate the string “You owe $2.73.” Is this doable with string interpolation?
 
-##Answer
+Answer
 
 String interpolation, the act of inserting placeholders for named values, is the right solution here. It will let us use printf formatting to convert the input value down to only two decimal values. The printf format for doing so is "%.2f", which specifies that exactly two of the most significant decimal digits will be printed.
 
@@ -47,11 +47,11 @@ amount: Double = 2.7255
 scala> val s = f"You owe $$$amount%.2f dollars"
 s: String = You owe $2.73 dollars
 
-###Is there a simpler way to write the following?
+Is there a simpler way to write the following?
 val flag: Boolean = false
 val result: Boolean = (flag == false)
 
-##Answer
+Answer
 
 This was a deliberately easy question, written with the goal to prod you to look for ways to reduce unnecessary code (even in the simple value assignments given here). A correct answer is that both the explicit types and the lengthy comparison can be simplified, requiring one to check both sides of the equation for code that can be removed.
 
@@ -63,10 +63,10 @@ result: Boolean = true
 
 
 
-###Convert the number 128 to a Char, a String, a Double, and then back to an Int. 
+Convert the number 128 to a Char, a String, a Double, and then back to an Int. 
 Do you expect the original amount to be retained? Do you need any special conversion functions for this?
 
-##Answer
+Answer
 
 You’ll need a host of conversion functions for this one! If you’re unsure of the exact function name, you can find them in the Scaladoc pages for the source type. You can also try the REPL’s tab-based. code completion feature. Go ahead and type "128." followed by a tab to see the available functions for that integer.
 
@@ -85,11 +85,11 @@ d: Double = 128.0
 scala> val i: Int = d.toInt
 i: Int = 128
 
-###Using the input string “Frank,123 Main,925-555-1943,95122” and regular expression matching,
+Using the input string “Frank,123 Main,925-555-1943,95122” and regular expression matching,
 retrieve the telephone number. Can you convert each part of the telephone number to its own integer 
 value? How would you store this in a tuple?
 
-##Answer
+Answer
 
 Let’s break this into separate steps to keep the parsing code simple. First, we’ll extract the phone number into three separate strings.
 
